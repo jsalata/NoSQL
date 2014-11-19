@@ -38,3 +38,8 @@ user	0m42.775s
 sys	1m23.773s
 
 #####Import przygotowanego pliku do bazy MongoDB
+Zaimportowałem plik korzystając z poniższej komendy:
+```sh
+time mongoimport -c Topics --type csv --file Train.csv --headerline
+```
+#####Import przygotowanego pliku do bazy PostgreSQL
