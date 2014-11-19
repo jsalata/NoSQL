@@ -43,3 +43,16 @@ Zaimportowałem plik korzystając z poniższej komendy:
 time mongoimport -c Topics --type csv --file Train.csv --headerline
 ```
 #####Import przygotowanego pliku do bazy PostgreSQL
+Aby zaimportować plik do PostgreSQL konieczne było utworzenie tabeli:
+```sh
+CREATE TABLE Topics(
+ID INT PRIMARY KEY NOT NULL,
+TITLE CHAR(128) NOT NULL,
+BODY CHAR(128) NOT NULL,
+TAGS CHAR(128) NOT NULL,
+);
+```
+I wypełnienie jej danymi z pliku:
+```sh
+COPY Topics FROM '/home/jsalata/NoSQL/Train/TrainFixed.csv' DELIMITER ',' CSV;
+```
