@@ -1,4 +1,0 @@
-NoSQL
-=====
-
-Technologie NoSQL
