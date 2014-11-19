@@ -36,3 +36,5 @@ Czas przygotowywania pliku:
 real	16m45.896s
 user	0m42.775s
 sys	1m23.773s
+
+#####Import przygotowanego pliku do bazy MongoDB
