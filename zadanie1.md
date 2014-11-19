@@ -4,7 +4,7 @@ ZADANIE 1
 
 |Specyfikacja komputera |                                         |
 |-----------------------|-----------------------------------------|
-| System operacyjny     | Linux Xubuntu 13.10 (64-bit)            |
+| System operacyjny     | Linux Mint 17 (64-bit)            |
 | Procesor              | Intel(R) Core(TM) i3-2370M CPU @ 2.40GHz|
 | Liczba rdzeni         | 4                                       |
 | Pamięć Ram            | 4 GB                                    |
@@ -26,7 +26,13 @@ exit 1;
 fi
 
 tr '\n' ' ' < "$1" | tr '\r' '\n' > "$2"
+
 sed -i '$ d' "$2"
 
 sed -i '1 c "_id","title","body","tags"' "$2" 
 ```
+Czas przygotowywania pliku:
+
+real	16m45.896s
+user	0m42.775s
+sys	1m23.773s
