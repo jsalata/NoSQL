@@ -1,6 +1,6 @@
-Technologie NoSQL
+ZADANIE 1
 =====
-Zadanie 1
+
 
 |Specyfikacja komputera |                                         |
 |-----------------------|-----------------------------------------|
