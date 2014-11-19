@@ -13,3 +13,4 @@ ZADANIE 1
 
 ###Zadanie 1a
 #####Przygotowanie pliku Train.csv
+Po pobraniu pliku z serwera trzeba przekonwertować go, aby możliwy był import do MongoDB.
