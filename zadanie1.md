@@ -11,5 +11,5 @@ ZADANIE 1
 | Dysk twardy           | 320 GB HDD                              |
 
 
-#Zadanie 1a
-##Przygotowanie pliku Train.csv
+###Zadanie 1a
+#####Przygotowanie pliku Train.csv
