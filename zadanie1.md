@@ -11,3 +11,5 @@ ZADANIE 1
 | Dysk twardy           | 320 GB HDD                              |
 
 
+Zadanie 1a
+Przygotowanie
