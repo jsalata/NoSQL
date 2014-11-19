@@ -56,3 +56,7 @@ I wypełnienie jej danymi z pliku:
 ```sh
 COPY Topics FROM '/home/jsalata/NoSQL/Train/TrainFixed.csv' DELIMITER ',' CSV;
 ```
+Aby zmierzyć czas w PostgreSQL wykorzystałem komendę:
+```sh
+\timing
+```
