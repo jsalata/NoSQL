@@ -77,3 +77,43 @@ Wynik:
 ```sh
 6.034.195
 ```
+### Zadanie 1c
+```sh
+var database = db.Train.find();
+
+var tags = {};
+var records = [];
+
+var tagsCounter = 0;
+var uniqueTagsCounter = 0;
+var docsCounter = 0;
+
+database.forEach(function(document) {
+    tagsCounter++;
+    var arrayOfTags = [];
+    if(document.tags.constructor === String) {
+        arrayOfTags = document.tags.split(" ");
+    } 
+    else { 
+        arrayOfTags.push(document.tags);
+    }
+document.tags = arrayOfTags;
+tagsCounter = arrayOfTags.length + tagsCounter;
+
+for(var i=0; i<arrayOfTags.length; i++) {
+    if(tags[arrayOfTags[i]] === undefined) {
+        uniqueTagsCounter++;  
+        tags[arrayOfTags[i]] = 1; 
+    }
+}
+
+records.push(document);
+if (docsCounter % 10000 === 0 || docsCounter === 6034195) {
+    db.TrainFixed.insert(records);
+    records = [];
+    }
+});
+
+print("Number of tags:" + tagsCounter);
+print("Number of unique tags:" + uniqueTagsCounter);
+```
