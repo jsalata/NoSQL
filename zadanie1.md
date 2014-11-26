@@ -40,7 +40,7 @@ sys	1m23.773s
 #####Import przygotowanego pliku do bazy MongoDB
 Zaimportowałem plik korzystając z poniższej komendy:
 ```sh
-time mongoimport -c Topics --type csv --file TrainFixed.csv --headerline
+time mongoimport -c Topics --type csv --file Train.csv --headerline
 ```
 #####Import przygotowanego pliku do bazy PostgreSQL
 Aby zaimportować plik do PostgreSQL konieczne było utworzenie tabeli:
@@ -54,7 +54,7 @@ TAGS CHAR(128) NOT NULL,
 ```
 I wypełnienie jej danymi z pliku:
 ```sh
-COPY Topics FROM '/home/jsalata/NoSQL/Train/TrainFixed.csv' DELIMITER ',' CSV;
+COPY Topics FROM '/home/jsalata/NoSQL/Train/Train.csv' DELIMITER ',' CSV;
 ```
 Aby zmierzyć czas w PostgreSQL wykorzystałem komendę:
 ```sh
@@ -121,7 +121,7 @@ for(var i=0; i<arrayOfTags.length; i++) {
 
 records.push(document);
 if (docsCounter % 10000 === 0 || docsCounter === 6034195) {
-    db.TrainFixed.insert(records);
+    db.Train.insert(records);
     records = [];
     }
 });
