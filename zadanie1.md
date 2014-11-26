@@ -129,3 +129,13 @@ if (docsCounter % 10000 === 0 || docsCounter === 6034195) {
 print("Number of tags:" + tagsCounter);
 print("Number of unique tags:" + uniqueTagsCounter);
 ```
+### Zadanie 1d
+Importujemy do Mongo bazę z ważniejszymi miastami Polski za pomocą polecenia: 
+```sh
+mongoimport -c places < polskieMiasta.json
+```
+Dodajemy geoindeks do kolekcji places:
+```sh
+
+db.places.ensureIndex({loc : "2dsphere"})
+```
