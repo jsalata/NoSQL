@@ -91,7 +91,7 @@ Wynik:
 ```
 ### Zadanie 1c
 ```sh
-var database = db.Train.find();
+var database = db.Topics.find();
 
 var tags = {};
 var records = [];
@@ -121,7 +121,7 @@ for(var i=0; i<arrayOfTags.length; i++) {
 
 records.push(document);
 if (docsCounter % 10000 === 0 || docsCounter === 6034195) {
-    db.Train.insert(records);
+    db.Topics.insert(records);
     records = [];
     }
 });
