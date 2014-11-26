@@ -95,7 +95,7 @@ Wynik:
 
 MongoDB:
 ```sh
-db.collection.aggregate(     { $match: {"modelName": "tv_shows"} },
+db.movies.aggregate(     { $match: {"modelName": "tv_shows"} },
     { $group: {_id: "$title", count: {$sum: 1}} },
     { $sort: {count: -1} },
     { $limit : 7}     );
