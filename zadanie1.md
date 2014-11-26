@@ -65,7 +65,7 @@ Aby zmierzyć czas w PostgreSQL wykorzystałem komendę:
 | Baza Danych |                    Niemonitorowany             |                    Monitorowany          |
 |-------------|:----------------------------------------------:|:----------------------------------------:|
 |   MongoDB (2.6.4)   | real.10m19.423s  user.1m55.413s  sys.0m14.548s | real.8m21.330s  user.1m56.758s  sys.0m13.011s|
-| PostgreSQL  |    - |      -  |   
+| PostgreSQL  |  764281.623ms (12 min) |   766421.893ms (12 min)   |   
 | Mongo 2.8.0 RC z WiredTiger  |   -     |   -  | 
 
 ### Zadanie 1b
