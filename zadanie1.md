@@ -67,3 +67,13 @@ Aby zmierzyć czas w PostgreSQL wykorzystałem komendę:
 |   MongoDB (2.6.4)   | real.10m19.423s  user.1m55.413s  sys.0m14.548s | real.8m21.330s  user.1m56.758s  sys.0m13.011s|
 | PostgreSQL  |    - |      -  |   
 | Mongo 2.8.0 RC z WiredTiger  |   -     |   -  | 
+
+### Zadanie 1b
+W celu policzenia liczby dokumentów w kolekcji Mongo wpisałem komendę:
+```sh
+db.Topics.count()
+```
+Wynik:
+```sh
+6.034.195
+```
