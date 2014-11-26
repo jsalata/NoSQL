@@ -68,6 +68,18 @@ Aby zmierzyć czas w PostgreSQL wykorzystałem komendę:
 | PostgreSQL  |  764281.623ms (12 min) |   766421.893ms (12 min)   |   
 | Mongo 2.8.0 RC z WiredTiger  |   -     |  785426.593ms (13 min) | 
 
+###MongoDB (2.6.4)
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/mongo264.png)
+
+###PostgreSQL
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/psql.png)
+
+###MongoDB (2.8.0 RC z WiredTiger)
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/mongo280.png)
+
 ### Zadanie 1b
 W celu policzenia liczby dokumentów w kolekcji Mongo wpisałem komendę:
 ```sh
