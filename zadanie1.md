@@ -139,3 +139,58 @@ Dodajemy geoindeks do kolekcji places:
 
 db.places.ensureIndex({loc : "2dsphere"})
 ```
+Zapytanie 1: Miasta oddalone od Gdańska o maksymalnie 300 km:
+```sh
+db.places.find({loc: {$near: {$geometry: {type: "Point", coordinates: [18.62938, 54.35403]}, $maxDistance: 300000}}}).skip(1)
+```
+[Geojson1](https://github.com/jsalata/NoSQL/blob/master/zapytania/zapytanie1.geojson)
+
+Zapytanie 2: Toruń oraz 2 najbliższe mu miasta:
+```sh
+db.places.find({loc: {$near: {$geometry: {type: "Point", coordinates: [18.613415, 53.018262]}}}}).limit(3)
+```
+[Geojson2](https://github.com/jsalata/NoSQL/blob/master/zapytania/zapytanie2.geojson)
+
+Zapytanie 3. Miasta leżące w obrębie tzw. Polski B:
+```sh
+var polygon = {
+  "type": "Polygon",
+  "coordinates": [[
+  [18.94043,54.342749],
+  [18.71109,53.448551],
+  [18.141174,53.103404],
+  [19.109344,52.659466],
+  [19.451294,51.821137],
+  [19.264526,50.742321],
+  [18.660278,49.765965],
+  [22.873535,48.860198],
+  [24.510498,51.066859],
+  [23.708496,54.235538],
+  [21.154175,54.500951],
+  [18.94043,54.342749]
+  ]]
+}
+db.places.find({loc: {$geoWithin: {$geometry: polygon}}})
+```
+[Geojson3](https://github.com/jsalata/NoSQL/blob/master/zapytania/zapytanie3.geojson)
+
+Zapytanie 4. Miasta na linii Gdańsk-Warszawa:
+```sh
+var Gdansk = db.places.findOne({ _id: "Gdansk" })
+var Warszawa = db.places.findOne({ _id: "Warszawa" })
+db.places.find({loc: {$geoIntersects: {$geometry: {"type": "LineString", "coordinates": [Gdansk.loc.coordinates,Warszawa.loc.coordinates]}}}})
+```
+[Geojson4](https://github.com/jsalata/NoSQL/blob/master/zapytania/zapytanie4.geojson)
+
+Zapytanie 5. Miasta położone na południku 19.021797
+```sh
+db.places.find({loc: {$geoIntersects: {$geometry: {type: "LineString", coordinates: [[19.021797, -90],[19.021797, 90]]}}}})
+```
+[Geojson5](https://github.com/jsalata/NoSQL/blob/master/zapytania/zapytanie5.geojson) 
+
+Zapytanie 6. Miasto leżące najbliżej Poznania:
+```sh
+var Poznan = db.places.findOne({ _id: "Poznan" })
+db.places.find({loc: {$near: {$geometry: Poznan.loc, $maxDistance: 600000}}}).skip(1).limit(1)
+```
+[Geojson6](https://github.com/jsalata/NoSQL/blob/master/zapytania/zapytanie6.geojson)
