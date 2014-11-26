@@ -132,7 +132,7 @@ print("Number of unique tags:" + uniqueTagsCounter);
 ### Zadanie 1d
 Importujemy do Mongo bazę z ważniejszymi miastami Polski za pomocą polecenia: 
 ```sh
-mongoimport -c places < polskieMiasta.json
+mongoimport -c places < polskiemiasta.json
 ```
 Dodajemy geoindeks do kolekcji places:
 ```sh
