@@ -60,7 +60,7 @@ Aby zmierzyć czas w PostgreSQL wykorzystałem komendę:
 ```sh
 \timing
 ```
-##Zestawiennie czasów importu
+##Zestawienie czasów importu
 
 | Baza Danych |                    Niemonitorowany             |                    Monitorowany          |
 |-------------|:----------------------------------------------:|:----------------------------------------:|
