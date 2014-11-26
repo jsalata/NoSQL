@@ -19,6 +19,9 @@ Wynik:
 { "_id" : "cillax", "count" : 43161 }
 { "_id" : "tamtomo", "count" : 42378 }
 ```
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/activeusers.png)
+
 MongoDB:
 ```sh
 db.movies.aggregate(
@@ -44,6 +47,9 @@ Wynik:
 { "_id" : "ingmar bergman", "count" : 42 }
 { "_id" : "john ford", "count" : 42 }
 ```
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/directors.png)
+
 MongoDB:
 ```sh
 db.movies.aggregate(
@@ -84,6 +90,9 @@ Wynik:
 { "_id" : "True Blood", "count" : 122913 }
 { "_id" : "The Walking Dead", "count" : 119369 }
 ```
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/tvshows.png)
+
 MongoDB:
 ```sh
 db.collection.aggregate(     { $match: {"modelName": "tv_shows"} },
@@ -113,6 +122,9 @@ Wynik:
 { "_id" : "X-Men", "count" : 667 }
 { "_id" : "Monsters, Inc.", "count" : 644 }
 ```
+
+![Alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/likes.png)
+
 MongoDB:
 ```sh
 db.movies.aggregate( 
