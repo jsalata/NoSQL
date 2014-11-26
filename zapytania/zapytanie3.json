@@ -1,0 +1,10 @@
+{ "_id" : "Olsztyn", "loc" : { "type" : "Point", "coordinates" : [ 20.478344, 53.776483 ] } }
+{ "_id" : "Torun", "loc" : { "type" : "Point", "coordinates" : [ 18.613415, 53.018262 ] } }
+{ "_id" : "Krakow", "loc" : { "type" : "Point", "coordinates" : [ 19.94276, 50.053357 ] } }
+{ "_id" : "Katowice", "loc" : { "type" : "Point", "coordinates" : [ 19.021797, 50.256795 ] } }
+{ "_id" : "Kielce", "loc" : { "type" : "Point", "coordinates" : [ 20.630264, 50.875176 ] } }
+{ "_id" : "Lodz", "loc" : { "type" : "Point", "coordinates" : [ 19.45919, 51.764374 ] } }
+{ "_id" : "Warszawa", "loc" : { "type" : "Point", "coordinates" : [ 21.003284, 52.230921 ] } }
+{ "_id" : "Bialystok", "loc" : { "type" : "Point", "coordinates" : [ 23.140125, 53.134588 ] } }
+{ "_id" : "Lublin", "loc" : { "type" : "Point", "coordinates" : [ 22.574501, 51.239929 ] } }
+{ "_id" : "Rzeszow", "loc" : { "type" : "Point", "coordinates" : [ 21.997719, 50.034582 ] } }

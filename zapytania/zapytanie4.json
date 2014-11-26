@@ -1,0 +1,2 @@
+{ "_id" : "Gdansk", "loc" : { "type" : "Point", "coordinates" : [ 18.629379, 54.35403 ] } }
+{ "_id" : "Warszawa", "loc" : { "type" : "Point", "coordinates" : [ 21.003284, 52.230921 ] } }

@@ -1,0 +1,4 @@
+{ "_id" : "Torun", "loc" : { "type" : "Point", "coordinates" : [ 18.613415, 53.018262 ] } }
+{ "_id" : "Poznan", "loc" : { "type" : "Point", "coordinates" : [ 16.926842, 52.408637 ] } }
+{ "_id" : "Gdansk", "loc" : { "type" : "Point", "coordinates" : [ 18.629379, 54.35403 ] } }
+
