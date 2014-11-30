@@ -58,7 +58,7 @@ db.movies.aggregate(
     { $group: {_id: "$_id.dir" , count: {$sum: 1}} },
     { $sort: {count: -1} },
     { $skip: 2},
-    { $limit : 8}
+    { $limit : 9}
     );
 ```
 PyMongo:
@@ -69,7 +69,7 @@ db.movies.aggregate(
     { "$group": {"_id": "$_id.dir" , "count": {"$sum": 1}} },
     { "$sort": {"count": -1} },
     { "$skip" : 2},
-    { "$limit" : 8}
+    { "$limit" : 9}
     );
 ```
 Pomijamy pierwsze dwa wyniki ponieważ są to filmy z nieokreślonym reżyserem albo grupa reżyserów (poniżej):
