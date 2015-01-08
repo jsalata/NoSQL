@@ -12,3 +12,32 @@ ZADANIE 3
 
 
 ### Anagramy
+
+Dane z pliku word_list.txt zaimportowałem do bazy MongoDB.
+
+W celu importu skorzystałem z polecenia:
+```sh
+mongoimport -d anagramy -c anagramy --type csv --file /home/jsalata/Pobrane/word_list.txt -f "words"
+```
+Zaimportowano:
+```sh
+> db.anagramy.count()
+8199
+```
+
+
+Anagramy uzyskałem z użyciem mapreduce:
+```sh
+db.anagramy.mapReduce(
+  function(){emit(Array.sum(this.words.split("").sort()), this.words);},
+  function(key, values) {return values.toString()},
+  {
+    query: {},
+    out: "anagrams"
+  }
+)
+```
+W ten sposób uzyskałem pary posortowanych słów oraz ciągów znaków. 
+
+
+
