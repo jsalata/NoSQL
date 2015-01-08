@@ -13,7 +13,7 @@ ZADANIE 3
 
 ### Anagramy
 
-Dane z pliku word_list.txt zaimportowałem do bazy MongoDB.
+Plik [word_list.txt](http://wbzyl.inf.ug.edu.pl/nosql/doc/data/word_list.txt) zaimportowałem do bazy MongoDB.
 
 W celu importu skorzystałem z polecenia:
 ```sh
