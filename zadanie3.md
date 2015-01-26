@@ -17,7 +17,7 @@ Plik [word_list.txt](http://wbzyl.inf.ug.edu.pl/nosql/doc/data/word_list.txt) za
 
 W celu importu skorzystałem z polecenia:
 ```sh
-mongoimport -d anagramy -c anagramy --type csv --file /home/jsalata/Pobrane/word_list.txt -f "words"
+mongoimport -d anagramy -c anagramy --type csv --file /home/jsalata/Pobrane/word_list.txt -f "word"
 ```
 
 Czas importu:
