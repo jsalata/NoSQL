@@ -19,6 +19,10 @@ W celu importu skorzystałem z polecenia:
 ```sh
 mongoimport -d anagramy -c anagramy --type csv --file /home/jsalata/Pobrane/word_list.txt -f "words"
 ```
+
+Czas importu: pomijalnie krótki
+
+
 Zaimportowano:
 ```sh
 > db.anagramy.count()
@@ -38,6 +42,30 @@ db.anagramy.mapReduce(
 )
 ```
 W ten sposób uzyskałem pary posortowanych słów oraz ciągów znaków. 
+
+```sh
+{ "_id" : "aaabcl", "value" : "cabala" }
+{ "_id" : "aaabcn", "value" : "cabana" }
+{ "_id" : "aaabcs", "value" : "casaba" }
+{ "_id" : "aaabnn", "value" : "banana" }
+{ "_id" : "aaabrz", "value" : "bazaar" }
+{ "_id" : "aaacci", "value" : "acacia" }
+{ "_id" : "aaaclp", "value" : "alpaca" }
+{ "_id" : "aaacmr", "value" : "maraca" }
+{ "_id" : "aaadmr", "value" : "armada" }
+{ "_id" : "aaaelz", "value" : "azalea" }
+{ "_id" : "aaaitx", "value" : "ataxia" }
+{ "_id" : "aaajmp", "value" : "pajama" }
+{ "_id" : "aaalms", "value" : "salaam" }
+{ "_id" : "aaamnn", "value" : "manana" }
+{ "_id" : "aaamnp", "value" : "panama" }
+{ "_id" : "aaappy", "value" : "papaya" }
+{ "_id" : "aaartv", "value" : "avatar" }
+{ "_id" : "aabbbo", "value" : "baobab" }
+{ "_id" : "aabblo", "value" : "balboa" }
+{ "_id" : "aabcls", "value" : "cabals" }
+Type "it" for more
+```
 
 ### Wikipedia
 
