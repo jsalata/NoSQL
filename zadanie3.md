@@ -34,15 +34,21 @@ Zaimportowano:
 8199
 ```
 
-
 Anagramy uzyskałem z użyciem mapreduce:
 ```sh
+var m = function() {
+    emit(Array.sum(this.word.split("").sort()), this.word);
+};
+var r = function(key, values) {
+    return values.toString();
+};
+
 db.anagramy.mapReduce(
-  function(){emit(Array.sum(this.words.split("").sort()), this.words);},
-  function(key, values) {return values.toString()},
+  m,
+  r,
   {
     query: {},
-    out: "anagrams"
+    out: "anagramy"
   }
 )
 ```
