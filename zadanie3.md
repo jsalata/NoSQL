@@ -106,13 +106,6 @@ user	7m34.223s
 sys	  1m24.641s
 ```
 
-Zaimportowano:
-```sh
-> db.test.count()
-8829973
-```
-
-
 Na koniec skorzystałem z mapreduce:
 ```sh
 var map = function() {  
