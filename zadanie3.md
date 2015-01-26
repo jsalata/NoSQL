@@ -20,7 +20,12 @@ W celu importu skorzystałem z polecenia:
 mongoimport -d anagramy -c anagramy --type csv --file /home/jsalata/Pobrane/word_list.txt -f "words"
 ```
 
-Czas importu: pomijalnie krótki
+Czas importu:
+```sh
+real	0m1.879s
+user	0m0.069s
+sys	0m0.044s
+```
 
 
 Zaimportowano:
