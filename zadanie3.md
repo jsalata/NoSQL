@@ -130,6 +130,9 @@ var reduce = function( key, values ) {
 }
 db.test.mapReduce(map, reduce, {out: "word_count"})
 ```
+
+Czas wykonywania oscylował w granicach 120 minut.
+
 ![alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/wiki-wykres.png "")
 
 
