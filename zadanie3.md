@@ -93,6 +93,7 @@ real	15m3.784s
 user	11m11.028s
 sys	  0m44.588s
 ```
+![alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/konwersja%20wiki.png "")
 
 W celu zaimportowania posłużyłem się komendą:
 ```sh
@@ -105,6 +106,7 @@ real	42m28.185s
 user	7m34.223s
 sys	  1m24.641s
 ```
+![alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/import%20wiki.png "")
 
 Na koniec skorzystałem z mapreduce:
 ```sh
@@ -128,5 +130,6 @@ var reduce = function( key, values ) {
 }
 db.test.mapReduce(map, reduce, {out: "word_count"})
 ```
+![alt text](https://raw.githubusercontent.com/jsalata/NoSQL/master/images/wiki-wykres.png "")
 
 
